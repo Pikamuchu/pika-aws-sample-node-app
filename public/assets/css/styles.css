@@ -181,6 +181,12 @@ footer .footer-contents {
     width: 80%;
     height: 80%;
   }
+
+  .graphics .tower svg {
+    height: calc(80vh);
+    padding-left: 10em;
+  }
+
 }
 
 @media (min-aspect-ratio: 11/5)  {
