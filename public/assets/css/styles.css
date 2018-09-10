@@ -4,6 +4,7 @@
 
 html, body {
   height: 100%;
+  font-size: 1.8rem;
 }
 
 html {
@@ -35,8 +36,7 @@ a {
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90%;
@@ -53,13 +53,12 @@ footer .footer-contents {
 }
 
 .graphic {
-  order: 0;
-  padding: 0 5rem;
+  order: 1;
+  min-width: 480px;
 }
 
 .message {
-  order: 1;
-  padding: 0 5rem;
+  order: 0;
 }
 
 .page-content {
@@ -82,9 +81,48 @@ footer .footer-contents {
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 512px) {
   .html {
-    font-size: 100%;
+    font-size: 50%;
+  }
+ 
+  .graphic {
+    min-width: 240px;
   }
 }
 
+@media (max-height: 512px) {
+  .html {
+    font-size: 50%;
+  }
+ 
+  .graphic {
+    min-width: 240px;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 560px) {
+  .graphic {
+    width: 80%;
+  }
+}
+
+@media (orientation: landscape), (min-width: 1024px) {
+  .html {
+    font-size: 100%;
+  }
+  
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .graphic {
+    order: 0;
+    min-width: 480px;
+  }
+
+  .message {
+    order: 1;
+  }
+}
