@@ -114,12 +114,12 @@ footer .footer-contents {
   
   .container {
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
   }
   
   .graphic {
     order: 0;
-    min-width: 480px;
+    min-width: 360px;
   }
 
   .message {
